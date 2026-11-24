@@ -90,6 +90,7 @@ def footer(cur_file):
       <li><a href="{L("newlaunch")}">New launch</a></li>
       <li><a href="{L("reviews")}">Reviews</a></li>
       <li><a href="{L("about")}">About Andik</a></li>
+      <li><a href="{L("malay")}">Malay property agent</a></li>
       <li style="margin-top:14px"><b style="color:#fff">Estates</b></li>
       <li><a href="{L("e-yishun")}">Yishun</a> · <a href="{L("e-punggol")}">Punggol</a> · <a href="{L("e-sengkang")}">Sengkang</a></li>
       <li><a href="{L("e-tampines")}">Tampines</a> · <a href="{L("e-pasirris")}">Pasir Ris</a></li>

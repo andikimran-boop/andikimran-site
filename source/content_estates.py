@@ -41,6 +41,7 @@ def estate_body(d):
       <a class="btn ghost" href="#check">What's my ''' + name + ''' home worth?</a>
     </div>
     <p class="phone">Call or WhatsApp <a href="tel:+6587368736">+65 8736 8736</a></p>
+    <p class="fine" style="margin-top:6px">Prefer Malay? <a href="{{L:malay}}">I'm a Malay-speaking agent</a>, boleh bincang dalam BM.</p>
   </div>
   <div class="card">
     <h3>''' + name + ''' at a glance</h3>

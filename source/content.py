@@ -26,6 +26,7 @@ SITE = {
 - [New launch](https://andikimran.com/new-launch): planning an HDB-to-condo/EC upgrade
 - [Reviews](https://andikimran.com/reviews): client stories and Google reviews
 - [About](https://andikimran.com/about): background and credentials
+- [Malay property agent](https://andikimran.com/malay-property-agent): Malay-speaking help for buying, selling, upgrading and faraid cases
 
 ## Guides
 - [Selling an inherited HDB flat (faraid, wills, estate)](https://andikimran.com/guides/inherited-hdb-flat-faraid)
@@ -200,7 +201,7 @@ def sold_strip():
 HOME_FAQ = [
     ("Do I have to commit to selling before we talk?", "No. Plenty of first chats end with “not yet”, and that's a good outcome. The Sale Check and our first sit-down are free, with no obligation to list."),
     ("Who do you work with?", "Pretty much everyone looking to buy, sell or rent a home in Singapore: first-timers, young families moving up, older couples rightsizing, landlords and investors. If I'm not the right person for something, I'll tell you and point you to someone who is."),
-    ("Can we speak in Malay?", "Boleh. I'm comfortable in Malay and English, and so is Mirta. Many families switch between both in the same meeting, and that's perfectly fine."),
+    ("Can we speak in Malay?", "Boleh. I'm comfortable in Malay and English, and so is Mirta. Many families switch between both in the same meeting, and that's perfectly fine. More on my <a href=\"{{L:malay}}\">Malay property agent</a> page."),
     ("Do you also help with new launch condos?", "Yes. If your next home is a new condo or EC, I plan the sale and the purchase together so the timing and cash flow work. See the <a href=\"{{L:newlaunch}}\">new launch page</a>."),
     ("What counts as a “complicated” case?", "Inherited flats and faraid, estates still waiting on paperwork, divorce, tight sale-and-buy timelines, and flats needing an extension of stay. These are the cases I enjoy most, because a calm plan makes the biggest difference."),
     ("Is Homes with AIMS a different agency?", "No. Homes with AIMS is my wife Mirta and me working as a team, both with PropNex. This site is my own page. <a href=\"https://www.homeswithaims.com\">homeswithaims.com</a> is our team's."),
@@ -777,7 +778,8 @@ PAGES = [
 
 from content_extra import EXTRA_PAGES
 from content_estates import ESTATE_PAGES, ESTATES
-PAGES[-1:-1] = EXTRA_PAGES + ESTATE_PAGES
+from content_malay import MALAY_PAGES
+PAGES[-1:-1] = EXTRA_PAGES + ESTATE_PAGES + MALAY_PAGES
 
 for _p in PAGES:
     _p["body"] = _p["body"].replace("{{GR}}", SITE["google_reviews"])
