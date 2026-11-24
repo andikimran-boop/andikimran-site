@@ -528,6 +528,7 @@ GUIDES = '''<section class="article-head"><div class="wrap">
     <a class="card situation" href="{{L:g-first}}"><p class="who">First home</p><h3>First-time home buyer guide: from HFE letter to keys</h3><p>BTO or resale, up to $230,000 in grants, the steps in order and what you pay at each one.</p><span class="more">Read the guide →</span></a>
     <a class="card situation" href="{{L:g-ssd}}"><p class="who">Stamp duty</p><h3>Seller's Stamp Duty (SSD): rates and the 4-year rule</h3><p>16%, 12%, 8%, 4% for homes bought from 4 July 2025, with a quick SSD check.</p><span class="more">Read the guide →</span></a>
   </div>
+[[ARTICLES]]
   <h2 style="margin-top:56px">Upgrade timelines, with every payment</h2>
   <div class="grid g3" style="margin-top:20px">
     <a class="card situation" href="{{L:g-hdb2hdb}}"><p class="who">3–5 months</p><h3>HDB to HDB</h3><p>Sell and buy in parallel so your sale funds the next flat and you move once.</p><span class="more">See the timeline →</span></a>
@@ -779,7 +780,22 @@ PAGES = [
 from content_extra import EXTRA_PAGES
 from content_estates import ESTATE_PAGES, ESTATES
 from content_malay import MALAY_PAGES
-PAGES[-1:-1] = EXTRA_PAGES + ESTATE_PAGES + MALAY_PAGES
+from content_articles import ARTICLES
+
+ARTICLE_PAGES = []
+for _a in ARTICLES:
+    ARTICLE_PAGES.append(dict(
+        key="a-" + _a["slug"], url="/guides/" + _a["slug"], file="guides/" + _a["slug"] + ".html",
+        h1_short=_a["h1"], crumbs=[("guides", "Guides")], title=_a["title"], desc=_a["desc"],
+        article=dict(published=_a["published"], modified=_a.get("modified", _a["published"])), faq=_a.get("faq") or None,
+        body=article_shell(_a["crumb"], _a["h1"], _a["intro"], _a.get("toc", []), _a["body"], _a.get("related", [("guides", "All guides")]))))
+_cards = "".join(
+    '<a class="card situation" href="{{L:a-' + _a["slug"] + '}}"><p class="who">' + _a["published"] + '</p><h3>' + _a["h1"] + '</h3><p>' + _a["intro"] + '</p><span class="more">Read →</span></a>'
+    for _a in ARTICLES[:12])
+for _p in PAGES:
+    if _p["key"] == "guides":
+        _p["body"] = _p["body"].replace("[[ARTICLES]]", ('  <h2 style="margin-top:56px">Latest articles</h2>\n  <div class="grid g3" style="margin-top:20px">' + _cards + '</div>\n') if ARTICLES else "")
+PAGES[-1:-1] = EXTRA_PAGES + ESTATE_PAGES + MALAY_PAGES + ARTICLE_PAGES
 
 for _p in PAGES:
     _p["body"] = _p["body"].replace("{{GR}}", SITE["google_reviews"])
