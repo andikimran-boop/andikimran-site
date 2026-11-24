@@ -258,7 +258,7 @@ def render(p):
 def main():
     if os.path.exists(OUT):
         for name in os.listdir(OUT):
-            if name == "img":
+            if name in ("img", ".git", "source", "preview", "README.md", ".vercelignore", ".gitignore"):
                 continue
             path = os.path.join(OUT, name)
             shutil.rmtree(path) if os.path.isdir(path) else os.remove(path)
