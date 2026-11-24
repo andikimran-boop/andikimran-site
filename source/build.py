@@ -34,7 +34,13 @@ def img_src(name, cur_file):
 
 
 def asset(name, cur_file):
-    return ("/assets/" + name) if MODE == "prod" else rel_prefix(cur_file) + "assets/" + name
+    import hashlib
+    try:
+        ver = hashlib.md5(open(os.path.join(os.path.dirname(__file__), name), "rb").read()).hexdigest()[:8]
+    except OSError:
+        ver = ""
+    q = ("?v=" + ver) if ver else ""
+    return ("/assets/" + name + q) if MODE == "prod" else rel_prefix(cur_file) + "assets/" + name + q
 
 
 def wa(text):
