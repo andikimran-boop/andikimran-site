@@ -87,14 +87,14 @@ def estate_body(d):
 </div></section>
 
 <section class="band dark" id="check"><div class="wrap split">
-  <div><h2>What's your ''' + name + ''' home worth?</h2><p class="lede">Send your postal code. I'll reply on WhatsApp with recent sales in your block and a rough idea of what you'd keep after selling.</p></div>
+  <div><h2>What's your ''' + name + ''' home worth?</h2><p class="lede">Enter your postal code and unit. You'll get a free report on WhatsApp in minutes: your indicative price, recent sales in your block and past performance.</p></div>
   <div>''' + sale_check_form() + '''</div>
 </div></section>'''
 
 
 def common_faq(name):
     return [
-        ("How much is my " + name + " flat worth?", "It depends on your block, floor, facing, remaining lease and condition. The quickest way: send me your postal code through the <a href=\"{{L:salecheck}}\">free Sale Check</a> and I'll reply with recent transactions in your block."),
+        ("How much is my " + name + " flat worth?", "It depends on your block, floor, facing, remaining lease and condition. The quickest way: send me your postal code through the <a href=\"{{L:salecheck}}\">free property report</a> and I'll reply with recent transactions in your block."),
         ("Do you only work in " + name + "?", "No, I help clients all over Singapore. But I know " + name + " well, and I'm happy to share what I've seen buyers there care about."),
     ]
 
@@ -218,5 +218,5 @@ for e in ESTATES:
         key=e["key"], url="/property-agent/" + e["slug"], file="property-agent/" + e["slug"] + ".html",
         h1_short="Property agent in " + n, crumbs=[("estates", "Estates")], area=n,
         title="Property Agent in " + n + " | Andik Imran, PropNex",
-        desc="Looking for the best property agent in " + n + "? Andik Imran (PropNex, since 2019, 65+ five-star reviews) shares what makes " + n + " unique, what buyers look for, and a free Sale Check. Call or WhatsApp +65 8736 8736.",
+        desc="Looking for the best property agent in " + n + "? Andik Imran (PropNex, since 2019, 65+ five-star reviews) shares what makes " + n + " unique, what buyers look for, and a free property report. Call or WhatsApp +65 8736 8736.",
         faq=e["faq"], body=estate_body(e)))

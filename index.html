@@ -165,7 +165,7 @@
     <p class="lede">I'm Andik. Buying your first home, selling, upgrading, renting, or sorting out something a little more complicated? I'll walk you through it in plain English (or Malay, boleh!), with the numbers worked out first. No pressure, no jargon, just honest advice.</p>
     <div class="btns">
       <a class="btn primary" href="https://wa.me/6587368736?text=Hi%20Andik%21%20I%20found%20your%20website%20and%20would%20like%20to%20chat."><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.4A8.4 8.4 0 1 1 21 11.5Z"/></svg>WhatsApp me</a>
-      <a class="btn ghost" href="/sale-check">Free Sale Check</a>
+      <a class="btn ghost" href="/sale-check">Free property report</a>
     </div>
     <p class="phone">Call or WhatsApp <a href="tel:+6587368736">+65 8736 8736</a></p>
     <ul class="proof">
@@ -193,7 +193,7 @@
   <div class="section-head"><h2>So, what can I help you with?</h2><p class="lede">Whatever stage you're at, pick the one that fits and we'll take it from there. Not sure? Just WhatsApp me and tell me what's going on.</p></div>
   <div class="grid g3">
     <a class="card situation" href="/guides/first-time-home-buyer-guide"><p class="who">Buying your first home</p><h3>Where do we even start?</h3><p>HFE letter, grants, BTO or resale, how much you can borrow. I'll make it simple.</p><span class="more">First-timer guide →</span></a>
-    <a class="card situation" href="/sale-check"><p class="who">Selling</p><h3>What's my home worth?</h3><p>Recent sales in your block and what you'd actually keep after selling. Free, on WhatsApp.</p><span class="more">Free Sale Check →</span></a>
+    <a class="card situation" href="/sale-check"><p class="who">Selling</p><h3>What's my home worth?</h3><p>Recent sales in your block and what you'd actually keep after selling. Free, on WhatsApp.</p><span class="more">Free property report →</span></a>
     <a class="card situation" href="/guides/upgrading-from-hdb-after-mop"><p class="who">Upgrading</p><h3>Bigger home, without the stress</h3><p>HDB to HDB, to a resale condo or a new launch, with the timeline and payments laid out.</p><span class="more">Upgrading guide →</span></a>
     <a class="card situation" href="/new-launch"><p class="who">New launches</p><h3>Shopping for a new condo?</h3><p>I'll help you compare honestly and plan the money, at no cost to you.</p><span class="more">New launch →</span></a>
     <a class="card situation" href="/guides/inherited-hdb-flat-faraid"><p class="who">The complicated ones</p><h3>Inherited flat, faraid, divorce</h3><p>Calm, step-by-step help when life makes a property decision for you.</p><span class="more">How I help →</span></a>
@@ -253,7 +253,7 @@
 <section class="band paper"><div class="wrap">
   <div class="section-head"><h2>How working with me goes</h2><p class="lede">No pressure, no jargon. You'll always know what happens next.</p></div>
   <ol class="steps">
-    <li><p class="when">Today, about 2 minutes</p><h3>Free Sale Check</h3><p>Send your postal code. I'll WhatsApp you recent sales in your block and a rough idea of the cash you'd keep.</p></li>
+    <li><p class="when">Today, about 2 minutes</p><h3>Free property report</h3><p>Enter your postal code and unit. Your report arrives on WhatsApp in minutes: indicative price, recent sales in your block, past performance.</p></li>
     <li><p class="when">One sit-down, at home or online</p><h3>Your numbers, laid out</h3><p>Sale price, CPF refund, cash proceeds, loan limits, what you can safely buy and a realistic timeline. Husband and wife both in the room.</p></li>
     <li><p class="when">When you're ready</p><h3>Sell, buy, move</h3><p>Pricing, marketing, viewings, negotiation, HDB paperwork and an extension of stay if you need one.</p></li>
   </ol>
@@ -278,32 +278,34 @@
 <section class="band dark" id="check"><div class="wrap split">
   <div>
     <h2>Curious what your flat could sell for?</h2>
-    <p class="lede">Send your postal code and flat type. I'll reply on WhatsApp with recent sales in your block and a rough estimate of the cash you'd keep after selling.</p>
-    <ul class="ticks"><li>Replies from me, not a call centre</li><li>Recent transacted prices in your block</li><li>Rough cash proceeds after loan and CPF refund</li><li>No obligation to list, ever</li></ul>
+    <p class="lede">Enter your postal code and unit. You'll get a free property report on WhatsApp in minutes: your indicative price, recent sales in your block and past performance.</p>
+    <ul class="ticks"><li>Your indicative price, on page 3</li><li>Recent transactions in your block and past performance</li><li>Sent to your WhatsApp as a PDF in minutes</li><li>No obligation to list, ever</li></ul>
   </div>
   <div><div class="check">
-  <h3>Get your free Sale Check</h3>
-  <p class="fine" style="margin:0 0 18px">Takes about a minute. I reply personally on WhatsApp.</p>
+  <h3>Get your free property report</h3>
+  <p class="fine" style="margin:0 0 18px">Your indicative price, recent sales in your block and past performance, sent to your WhatsApp as a PDF in a few minutes.</p>
   <form class="sale-check" novalidate>
     <div class="row2">
-      <div class="field"><label for="sc-name">Your name</label><input id="sc-name" name="name" autocomplete="given-name" required></div>
-      <div class="field"><label for="sc-postal">Postal code</label><input id="sc-postal" name="postal" inputmode="numeric" maxlength="6" pattern="[0-9]{6}" placeholder="e.g. 821325" required></div>
+      <div class="field"><label for="sc-postal">Postal code</label><input id="sc-postal" name="postal" inputmode="numeric" maxlength="6" placeholder="e.g. 821325" required></div>
+      <div class="field"><label for="sc-unit">Unit number</label><input id="sc-unit" name="unit" placeholder="e.g. #08-124"></div>
     </div>
+    <div class="field"><label for="sc-type">Your home</label>
+      <select id="sc-type" name="type"><optgroup label="HDB"><option value="HDB|2-room">2-room</option><option value="HDB|3-room">3-room</option><option value="HDB|4-room" selected>4-room</option><option value="HDB|5-room">5-room</option><option value="HDB|Executive Apartment">Executive Apartment</option><option value="HDB|Executive Maisonette (EM)">Executive Maisonette</option></optgroup><optgroup label="Condo / EC"><option value="Condo|1-bedroom">1-bedroom</option><option value="Condo|2-bedroom">2-bedroom</option><option value="Condo|3-bedroom">3-bedroom</option><option value="Condo|4-bedroom">4-bedroom</option><option value="Condo|5-bedroom or more">5-bedroom or more</option></optgroup><optgroup label="Landed"><option value="Landed|Terrace">Terrace</option><option value="Landed|Semi-detached">Semi-detached</option><option value="Landed|Bungalow">Bungalow</option></optgroup></select></div>
     <div class="row2">
-      <div class="field"><label for="sc-type">Your home</label>
-        <select id="sc-type" name="type"><option>3-room HDB</option><option selected>4-room HDB</option><option>5-room HDB</option><option>Executive HDB</option><option>Condo / EC</option><option>Not sure</option></select></div>
-      <div class="field"><label for="sc-why">What's on your mind?</label>
-        <select id="sc-why" name="why"><option>Thinking of upgrading</option><option>Inherited flat / faraid</option><option>Divorce or separation</option><option>Rightsizing</option><option>Buying a new launch</option><option>Just curious about my price</option></select></div>
+      <div class="field"><label for="sc-name">Your name</label><input id="sc-name" name="name" autocomplete="given-name" required></div>
+      <div class="field"><label for="sc-mobile">WhatsApp number</label><input id="sc-mobile" name="mobile" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="e.g. 9123 4567" required></div>
     </div>
-    <div class="field"><label for="sc-note">Anything I should know? <span style="font-weight:400;color:var(--muted)">(optional)</span></label><input id="sc-note" name="note" placeholder="e.g. MOP in March, want to stay near my parents"></div>
+    <div class="field"><label for="sc-why">What's on your mind? <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
+      <select id="sc-why" name="why"><option>Just curious about my price</option><option>Thinking of upgrading</option><option>Inherited flat / faraid</option><option>Divorce or separation</option><option>Rightsizing</option><option>Buying a new launch</option></select></div>
     <p class="err" role="alert"></p>
-    <button class="btn primary" type="submit"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.4A8.4 8.4 0 1 1 21 11.5Z"/></svg>Send on WhatsApp</button>
-    <p class="fine">By sending, you agree that Andik may contact you on WhatsApp about your enquiry, in line with the PDPA. No spam, no cold calls.</p>
+    <button class="btn primary" type="submit"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.4A8.4 8.4 0 1 1 21 11.5Z"/></svg>Send my report</button>
+    <p class="fine">By sending, you agree that Andik Imran and Mirta Syazanna (Homes with AIMS, PropNex) may send your report and follow-up messages to this WhatsApp number about your enquiry, in line with the PDPA. Reply STOP anytime. No cold calls.</p>
   </form>
   <div class="done" aria-live="polite">
-    <h3>Almost done</h3>
-    <p>Tap below to send your details on WhatsApp. I'll reply with recent sales in your block, usually the same day.</p>
-    <a class="btn wa" href="#" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.4A8.4 8.4 0 1 1 21 11.5Z"/></svg>Open WhatsApp</a>
+    <h3>On its way!</h3>
+    <p>Your report is being prepared. In a minute or two you'll get a WhatsApp from <b>Homes with AIMS (+65 8568 5643)</b> asking you to confirm your address. Reply "yes" and your PDF arrives right after.</p>
+    <p class="fine">Prefer to talk first? WhatsApp Andik directly at +65 8736 8736.</p>
+    <a class="btn wa" href="https://wa.me/6587368736" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.4A8.4 8.4 0 1 1 21 11.5Z"/></svg>WhatsApp Andik</a>
   </div>
 </div></div>
 </div></section>
@@ -317,7 +319,7 @@
       <p><a href="tel:+6587368736">Call +65 8736 8736</a><br><a href="https://wa.me/6587368736?text=Hi%20Andik%2C%20I%20found%20you%20through%20your%20website.">WhatsApp +65 8736 8736</a></p>
     </div>
     <div><h4>Explore</h4><ul>
-      <li><a href="/sale-check">Free Sale Check</a></li>
+      <li><a href="/sale-check">Free property report</a></li>
       <li><a href="/loan-calculator">Loan calculator</a></li>
       <li><a href="/safe-upgrading-plan">SAFE Upgrading Plan</a></li>
       <li><a href="/new-launch">New launch</a></li>

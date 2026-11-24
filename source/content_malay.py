@@ -16,7 +16,7 @@ MALAY_PAGE = '''<section class="article-head"><div class="wrap split">
     <p class="lede">Hi, I'm Andik, a PropNex property consultant since 2019. Many of the families I work with are Malay families who'd rather talk about something this big, their home, their CPF, their parents' flat, in Malay. Boleh, no problem at all.</p>
     <div class="btns">
       <a class="btn primary" href="{{WA:Assalamualaikum Andik, saya nak tanya pasal rumah.}}">''' + CHAT + '''WhatsApp saya</a>
-      <a class="btn ghost" href="{{L:salecheck}}">Free Sale Check</a>
+      <a class="btn ghost" href="{{L:salecheck}}">Free property report</a>
     </div>
     <p class="phone">Call or WhatsApp <a href="tel:+6587368736">+65 8736 8736</a> · Bahasa Melayu or English</p>
   </div>
@@ -64,7 +64,7 @@ MALAY_PAGE = '''<section class="article-head"><div class="wrap split">
 </div></section>
 
 <section class="band dark"><div class="wrap split">
-  <div><h2>Let's talk, in Malay or English</h2><p class="lede">Send your postal code and I'll reply on WhatsApp with recent sales in your block. No obligation.</p></div>
+  <div><h2>Let's talk, in Malay or English</h2><p class="lede">Get a free property report on WhatsApp in minutes: your indicative price and recent sales in your block. No obligation.</p></div>
   <div>''' + sale_check_form() + '''</div>
 </div></section>'''
 

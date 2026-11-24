@@ -84,7 +84,7 @@ def footer(cur_file):
       <p><a href="tel:+6587368736">Call +65 8736 8736</a><br><a href="{wa("Hi Andik, I found you through your website.")}">WhatsApp +65 8736 8736</a></p>
     </div>
     <div><h4>Explore</h4><ul>
-      <li><a href="{L("salecheck")}">Free Sale Check</a></li>
+      <li><a href="{L("salecheck")}">Free property report</a></li>
       <li><a href="{L("calculator")}">Loan calculator</a></li>
       <li><a href="{L("safe")}">SAFE Upgrading Plan</a></li>
       <li><a href="{L("newlaunch")}">New launch</a></li>

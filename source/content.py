@@ -22,7 +22,7 @@ SITE = {
 ## Key pages
 - [Home](https://andikimran.com/): who Andik helps and how
 - [SAFE Upgrading Plan](https://andikimran.com/safe-upgrading-plan): his method for upgrading without financial stretch
-- [Free Sale Check](https://andikimran.com/sale-check): free estimate of sale price and cash proceeds via WhatsApp
+- [Free property report](https://andikimran.com/sale-check): free estimate of sale price and cash proceeds via WhatsApp
 - [New launch](https://andikimran.com/new-launch): planning an HDB-to-condo/EC upgrade
 - [Reviews](https://andikimran.com/reviews): client stories and Google reviews
 - [About](https://andikimran.com/about): background and credentials
@@ -69,30 +69,38 @@ CHAT = '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" s
 UPDATED = "24 November 2026"
 
 
-def sale_check_form(title="Get your free Sale Check"):
+def sale_check_form(title="Get your free property report"):
+    hdb = [("HDB|2-room", "2-room"), ("HDB|3-room", "3-room"), ("HDB|4-room", "4-room"), ("HDB|5-room", "5-room"),
+           ("HDB|Executive Apartment", "Executive Apartment"), ("HDB|Executive Maisonette (EM)", "Executive Maisonette")]
+    condo = [("Condo|1-bedroom", "1-bedroom"), ("Condo|2-bedroom", "2-bedroom"), ("Condo|3-bedroom", "3-bedroom"),
+             ("Condo|4-bedroom", "4-bedroom"), ("Condo|5-bedroom or more", "5-bedroom or more")]
+    landed = [("Landed|Terrace", "Terrace"), ("Landed|Semi-detached", "Semi-detached"), ("Landed|Bungalow", "Bungalow")]
+    opt = lambda items, sel=None: "".join('<option value="' + v + '"' + (" selected" if v == sel else "") + ">" + t + "</option>" for v, t in items)
     return '''<div class="check">
   <h3>''' + title + '''</h3>
-  <p class="fine" style="margin:0 0 18px">Takes about a minute. I reply personally on WhatsApp.</p>
+  <p class="fine" style="margin:0 0 18px">Your indicative price, recent sales in your block and past performance, sent to your WhatsApp as a PDF in a few minutes.</p>
   <form class="sale-check" novalidate>
     <div class="row2">
-      <div class="field"><label for="sc-name">Your name</label><input id="sc-name" name="name" autocomplete="given-name" required></div>
-      <div class="field"><label for="sc-postal">Postal code</label><input id="sc-postal" name="postal" inputmode="numeric" maxlength="6" pattern="[0-9]{6}" placeholder="e.g. 821325" required></div>
+      <div class="field"><label for="sc-postal">Postal code</label><input id="sc-postal" name="postal" inputmode="numeric" maxlength="6" placeholder="e.g. 821325" required></div>
+      <div class="field"><label for="sc-unit">Unit number</label><input id="sc-unit" name="unit" placeholder="e.g. #08-124"></div>
     </div>
+    <div class="field"><label for="sc-type">Your home</label>
+      <select id="sc-type" name="type"><optgroup label="HDB">''' + opt(hdb, "HDB|4-room") + '''</optgroup><optgroup label="Condo / EC">''' + opt(condo) + '''</optgroup><optgroup label="Landed">''' + opt(landed) + '''</optgroup></select></div>
     <div class="row2">
-      <div class="field"><label for="sc-type">Your home</label>
-        <select id="sc-type" name="type"><option>3-room HDB</option><option selected>4-room HDB</option><option>5-room HDB</option><option>Executive HDB</option><option>Condo / EC</option><option>Not sure</option></select></div>
-      <div class="field"><label for="sc-why">What's on your mind?</label>
-        <select id="sc-why" name="why"><option>Thinking of upgrading</option><option>Inherited flat / faraid</option><option>Divorce or separation</option><option>Rightsizing</option><option>Buying a new launch</option><option>Just curious about my price</option></select></div>
+      <div class="field"><label for="sc-name">Your name</label><input id="sc-name" name="name" autocomplete="given-name" required></div>
+      <div class="field"><label for="sc-mobile">WhatsApp number</label><input id="sc-mobile" name="mobile" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="e.g. 9123 4567" required></div>
     </div>
-    <div class="field"><label for="sc-note">Anything I should know? <span style="font-weight:400;color:var(--muted)">(optional)</span></label><input id="sc-note" name="note" placeholder="e.g. MOP in March, want to stay near my parents"></div>
+    <div class="field"><label for="sc-why">What's on your mind? <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
+      <select id="sc-why" name="why"><option>Just curious about my price</option><option>Thinking of upgrading</option><option>Inherited flat / faraid</option><option>Divorce or separation</option><option>Rightsizing</option><option>Buying a new launch</option></select></div>
     <p class="err" role="alert"></p>
-    <button class="btn primary" type="submit">''' + CHAT + '''Send on WhatsApp</button>
-    <p class="fine">By sending, you agree that Andik may contact you on WhatsApp about your enquiry, in line with the PDPA. No spam, no cold calls.</p>
+    <button class="btn primary" type="submit">''' + CHAT + '''Send my report</button>
+    <p class="fine">By sending, you agree that Andik Imran and Mirta Syazanna (Homes with AIMS, PropNex) may send your report and follow-up messages to this WhatsApp number about your enquiry, in line with the PDPA. Reply STOP anytime. No cold calls.</p>
   </form>
   <div class="done" aria-live="polite">
-    <h3>Almost done</h3>
-    <p>Tap below to send your details on WhatsApp. I'll reply with recent sales in your block, usually the same day.</p>
-    <a class="btn wa" href="#" target="_blank" rel="noopener">''' + CHAT + '''Open WhatsApp</a>
+    <h3>On its way!</h3>
+    <p>Your report is being prepared. In a minute or two you'll get a WhatsApp from <b>Homes with AIMS (+65 8568 5643)</b> asking you to confirm your address. Reply "yes" and your PDF arrives right after.</p>
+    <p class="fine">Prefer to talk first? WhatsApp Andik directly at +65 8736 8736.</p>
+    <a class="btn wa" href="https://wa.me/6587368736" target="_blank" rel="noopener">''' + CHAT + '''WhatsApp Andik</a>
   </div>
 </div>'''
 
@@ -124,7 +132,7 @@ def article_shell(crumb_label, h1, intro, toc, body, related):
 </div></section>
 <section class="band dark"><div class="wrap split">
   <div><h2>Want me to look at your case?</h2><p class="lede">Send your postal code and a line about your situation. I'll come back with recent sales in your block and what I'd do first.</p></div>
-  <div>''' + sale_check_form("Free Sale Check") + '''</div>
+  <div>''' + sale_check_form("Free property report") + '''</div>
 </div></section>'''
 
 
@@ -214,7 +222,7 @@ HOME = '''<section class="hero"><div class="wrap hero-grid">
     <p class="lede">I'm Andik. Buying your first home, selling, upgrading, renting, or sorting out something a little more complicated? I'll walk you through it in plain English (or Malay, boleh!), with the numbers worked out first. No pressure, no jargon, just honest advice.</p>
     <div class="btns">
       <a class="btn primary" href="{{WA:Hi Andik! I found your website and would like to chat.}}">''' + CHAT + '''WhatsApp me</a>
-      <a class="btn ghost" href="{{L:salecheck}}">Free Sale Check</a>
+      <a class="btn ghost" href="{{L:salecheck}}">Free property report</a>
     </div>
     <p class="phone">Call or WhatsApp <a href="tel:+6587368736">+65 8736 8736</a></p>
     <ul class="proof">
@@ -231,7 +239,7 @@ HOME = '''<section class="hero"><div class="wrap hero-grid">
   <div class="section-head"><h2>So, what can I help you with?</h2><p class="lede">Whatever stage you're at, pick the one that fits and we'll take it from there. Not sure? Just WhatsApp me and tell me what's going on.</p></div>
   <div class="grid g3">
     <a class="card situation" href="{{L:g-first}}"><p class="who">Buying your first home</p><h3>Where do we even start?</h3><p>HFE letter, grants, BTO or resale, how much you can borrow. I'll make it simple.</p><span class="more">First-timer guide →</span></a>
-    <a class="card situation" href="{{L:salecheck}}"><p class="who">Selling</p><h3>What's my home worth?</h3><p>Recent sales in your block and what you'd actually keep after selling. Free, on WhatsApp.</p><span class="more">Free Sale Check →</span></a>
+    <a class="card situation" href="{{L:salecheck}}"><p class="who">Selling</p><h3>What's my home worth?</h3><p>Recent sales in your block and what you'd actually keep after selling. Free, on WhatsApp.</p><span class="more">Free property report →</span></a>
     <a class="card situation" href="{{L:g-upgrade}}"><p class="who">Upgrading</p><h3>Bigger home, without the stress</h3><p>HDB to HDB, to a resale condo or a new launch, with the timeline and payments laid out.</p><span class="more">Upgrading guide →</span></a>
     <a class="card situation" href="{{L:newlaunch}}"><p class="who">New launches</p><h3>Shopping for a new condo?</h3><p>I'll help you compare honestly and plan the money, at no cost to you.</p><span class="more">New launch →</span></a>
     <a class="card situation" href="{{L:g-faraid}}"><p class="who">The complicated ones</p><h3>Inherited flat, faraid, divorce</h3><p>Calm, step-by-step help when life makes a property decision for you.</p><span class="more">How I help →</span></a>
@@ -291,7 +299,7 @@ HOME = '''<section class="hero"><div class="wrap hero-grid">
 <section class="band paper"><div class="wrap">
   <div class="section-head"><h2>How working with me goes</h2><p class="lede">No pressure, no jargon. You'll always know what happens next.</p></div>
   <ol class="steps">
-    <li><p class="when">Today, about 2 minutes</p><h3>Free Sale Check</h3><p>Send your postal code. I'll WhatsApp you recent sales in your block and a rough idea of the cash you'd keep.</p></li>
+    <li><p class="when">Today, about 2 minutes</p><h3>Free property report</h3><p>Enter your postal code and unit. Your report arrives on WhatsApp in minutes: indicative price, recent sales in your block, past performance.</p></li>
     <li><p class="when">One sit-down, at home or online</p><h3>Your numbers, laid out</h3><p>Sale price, CPF refund, cash proceeds, loan limits, what you can safely buy and a realistic timeline. Husband and wife both in the room.</p></li>
     <li><p class="when">When you're ready</p><h3>Sell, buy, move</h3><p>Pricing, marketing, viewings, negotiation, HDB paperwork and an extension of stay if you need one.</p></li>
   </ol>
@@ -316,8 +324,8 @@ HOME = '''<section class="hero"><div class="wrap hero-grid">
 <section class="band dark" id="check"><div class="wrap split">
   <div>
     <h2>Curious what your flat could sell for?</h2>
-    <p class="lede">Send your postal code and flat type. I'll reply on WhatsApp with recent sales in your block and a rough estimate of the cash you'd keep after selling.</p>
-    <ul class="ticks"><li>Replies from me, not a call centre</li><li>Recent transacted prices in your block</li><li>Rough cash proceeds after loan and CPF refund</li><li>No obligation to list, ever</li></ul>
+    <p class="lede">Enter your postal code and unit. You'll get a free property report on WhatsApp in minutes: your indicative price, recent sales in your block and past performance.</p>
+    <ul class="ticks"><li>Your indicative price, on page 3</li><li>Recent transactions in your block and past performance</li><li>Sent to your WhatsApp as a PDF in minutes</li><li>No obligation to list, ever</li></ul>
   </div>
   <div>''' + sale_check_form() + '''</div>
 </div></section>'''
@@ -422,7 +430,7 @@ REVIEWS_PAGE = '''<section class="article-head"><div class="wrap">
   ''' + sold_strip() + '''
 </div></section>
 <section class="band dark"><div class="wrap split">
-  <div><h2>Your story could be next</h2><p class="lede">Start with a free Sale Check. No obligation, just your numbers.</p></div>
+  <div><h2>Your story could be next</h2><p class="lede">Start with a free property report. No obligation, just your numbers.</p></div>
   <div>''' + sale_check_form() + '''</div>
 </div></section>'''
 
@@ -465,7 +473,7 @@ SAFE = '''<section class="article-head"><div class="wrap">
   <div class="card" style="align-self:start">
     <h3>Will your upgrade pass SAFE?</h3>
     <p>Send me your postal code and flat type. I'll do the first rough check for free.</p>
-    <a class="btn primary" href="{{L:salecheck}}">Get my free Sale Check</a>
+    <a class="btn primary" href="{{L:salecheck}}">Get my free property report</a>
   </div>
 </div></section>'''
 
@@ -539,7 +547,7 @@ GUIDES = '''<section class="article-head"><div class="wrap">
 </div></section>
 <section class="band dark"><div class="wrap split">
   <div><h2>Can't find your situation?</h2><p class="lede">Tell me what's going on. If I haven't written about it yet, I've probably still seen it.</p></div>
-  <div>''' + sale_check_form("Ask Andik") + '''</div>
+  <div>''' + sale_check_form("Free property report") + '''</div>
 </div></section>'''
 
 # ---------------------------------------------------------------- GUIDE: FARAID
@@ -687,15 +695,16 @@ RIGHTSIZE_BODY = '''
 # ---------------------------------------------------------------- SALE CHECK
 SC_FAQ = [
     ("Is it really free?", "Yes. No obligation to list, and I won't chase you. Most people simply want to know their numbers."),
-    ("How accurate is it?", "It's based on recent transactions in your block and nearby blocks. For a firmer figure, I'll view the flat and look at its floor, facing, condition and renovation."),
-    ("Will you call me?", "Only if you ask. I reply on WhatsApp, where you can read it in your own time."),
+    ("How accurate is it?", "It's an indicative price based on recent transactions in your block and nearby blocks, using official HDB and URA data. For a firmer figure, I'll view the home and look at its floor, facing, condition and renovation."),
+    ("Will you call me?", "No. Your report arrives on WhatsApp, where you can read it in your own time. If you have questions, just reply and Andik or Mirta will get back to you."),
+    ("Why does the report come from 8568 5643?", "That's the Homes with AIMS number (Andik and Mirta's team line) that sends reports automatically. To talk to Andik directly, WhatsApp +65 8736 8736."),
 ]
 SALE_CHECK = '''<section class="article-head"><div class="wrap split">
   <div>
-    <nav class="crumbs" aria-label="Breadcrumb"><a href="{{L:home}}">Home</a> / Free Sale Check</nav>
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="{{L:home}}">Home</a> / Free property report</nav>
     <h1>What could your flat sell for, and what would you keep?</h1>
-    <p class="lede">Send me your postal code. I'll reply on WhatsApp with recent sales in your block and a rough estimate of the cash you'd keep after selling. Free, with no obligation.</p>
-    <ul class="ticks"><li>Recent transacted prices in your block</li><li>A realistic price range, not a sales pitch</li><li>Rough cash proceeds after loan and CPF refund</li><li>A personal reply from Andik, usually the same day</li></ul>
+    <p class="lede">Enter your postal code and unit, and get a free property report on WhatsApp in minutes: your indicative price, recent sales in your block and past performance. No obligation.</p>
+    <ul class="ticks"><li>Your indicative price, on page 3</li><li>Recent transactions in your block</li><li>Past price performance for homes like yours</li><li>Sent to your WhatsApp as a PDF in minutes</li></ul>
     <h2 style="margin-top:34px;font-size:30px">Questions</h2>
     [[FAQ]]
   </div>
@@ -750,7 +759,7 @@ PAGES = [
          body=article_shell("Inherited flat &amp; faraid", "Selling an inherited HDB flat: faraid, wills and what to do first",
                             "When a parent passes on, the flat raises hard questions. Here's the order to take them in, and how to keep the family together while you do.",
                             [("held", "How the flat was held"), ("faraid", "Muslim owners: faraid"), ("non-muslim", "Non-Muslim owners"), ("keep", "Can the family keep it?"), ("sell", "How the sale works"), ("family", "Keeping the family together")],
-                            FARAID_BODY, [("g-divorce", "Selling during a divorce"), ("g-rightsize", "Rightsizing your HDB"), ("salecheck", "Free Sale Check")])),
+                            FARAID_BODY, [("g-divorce", "Selling during a divorce"), ("g-rightsize", "Rightsizing your HDB"), ("salecheck", "Free property report")])),
     dict(key="g-divorce", url="/guides/selling-hdb-flat-divorce", file="guides/selling-hdb-flat-divorce.html",
          h1_short="Selling your HDB flat during a divorce", crumbs=[("guides", "Guides")],
          title="Selling Your HDB Flat During a Divorce in Singapore (2026 Guide)",
@@ -759,7 +768,7 @@ PAGES = [
          body=article_shell("Selling during a divorce", "Selling your HDB flat during a divorce",
                             "How the decision to sell or keep is made, what MOP means for you, where the money goes, and how to sell without another fight.",
                             [("decide", "Where it's decided"), ("keep", "Keeping the flat"), ("mop", "MOP: the date that matters"), ("money", "Where the money goes"), ("calm", "Keeping the sale calm")],
-                            DIVORCE_BODY, [("g-faraid", "Inherited flat &amp; faraid"), ("g-upgrade", "Upgrading after MOP"), ("salecheck", "Free Sale Check")])),
+                            DIVORCE_BODY, [("g-faraid", "Inherited flat &amp; faraid"), ("g-upgrade", "Upgrading after MOP"), ("salecheck", "Free property report")])),
     dict(key="g-rightsize", url="/guides/rightsizing-hdb-flat", file="guides/rightsizing-hdb-flat.html",
          h1_short="Rightsizing your HDB when the kids have moved out", crumbs=[("guides", "Guides")],
          title="Rightsizing Your HDB Flat in Singapore: Options, Schemes & Timing",
@@ -768,8 +777,8 @@ PAGES = [
          body=article_shell("Rightsizing", "Rightsizing your HDB when the kids have moved out",
                             "How to free up cash, cut the upkeep and stay close to family, without moving twice.",
                             [("options", "Your options"), ("numbers", "Getting the numbers right"), ("schemes", "Schemes worth checking"), ("timing", "Move once, not twice"), ("heart", "The part that isn't about money")],
-                            RIGHTSIZE_BODY, [("g-upgrade", "Upgrading after MOP"), ("g-faraid", "Inherited flat &amp; faraid"), ("salecheck", "Free Sale Check")])),
-    dict(key="salecheck", url="/sale-check", file="sale-check.html", h1_short="Free Sale Check",
+                            RIGHTSIZE_BODY, [("g-upgrade", "Upgrading after MOP"), ("g-faraid", "Inherited flat &amp; faraid"), ("salecheck", "Free property report")])),
+    dict(key="salecheck", url="/sale-check", file="sale-check.html", h1_short="Free property report",
          title="Free HDB Sale Check | What Your Flat Could Sell For | Andik Imran",
          desc="Send your postal code and get recent sales in your block plus a rough estimate of the cash you'd keep after selling. Free, on WhatsApp, no obligation.",
          body=SALE_CHECK, faq=SC_FAQ),
