@@ -334,59 +334,116 @@ HOME = '''<section class="hero"><div class="wrap hero-grid">
 ABOUT = '''<section class="article-head"><div class="wrap split">
   <div>
     <nav class="crumbs" aria-label="Breadcrumb"><a href="{{L:home}}">Home</a> / About</nav>
-    <h1>Hi, I'm Andik.</h1>
-    <p class="lede">Husband to Mirta, dad of four, and a property consultant with PropNex since 2019. I help people buy, sell and rent homes across Singapore, and I like to get the numbers sorted before anything else.</p>
-    <div class="btns"><a class="btn primary" href="{{WA:Hi Andik, I read your About page and would like to chat.}}">''' + CHAT + '''Say hi on WhatsApp</a></div>
+    <p class="kicker pnx-line"><span class="pnx">{{PIC:propnex-logo.png|PropNex Realty}}<b>PropNex</b></span>Associate Group Director</p>
+    <h1>Andik Imran</h1>
+    <p class="lede">Property consultant since 2019. I help Singapore families buy, sell and upgrade their homes, with the numbers worked out before anyone talks about listing. Top rookie in my first year, a top producer every year since, and more than 100 families helped.</p>
+    <ul class="proof">
+      <li><b>Since 2019</b></li><li><b>100+</b> families helped</li><li><b>65+</b> five-star Google reviews</li><li><b>20–25</b> transactions a year</li><li>English &amp; Malay</li>
+    </ul>
+    <div class="btns">
+      <a class="btn primary" href="{{WA:Hi Andik, I read your profile and would like to chat.}}">''' + CHAT + '''WhatsApp me</a>
+      <a class="btn ghost" href="{{L:reviews}}">Read client reviews</a>
+    </div>
+    <p class="phone">Call or WhatsApp <a href="tel:+6587368736">+65 8736 8736</a> · CEA Reg. No. R061801F</p>
   </div>
   <div class="portrait">{{PIC:andik-imran.webp|Andik Imran, PropNex Associate Group Director}}</div>
 </div></section>
 
 <section class="band paper"><div class="wrap split rev">
   <div class="prose">
-    <h2>Why I do this</h2>
-    <p>Our first home was a 3-room BTO. When the family grew, Mirta and I upgraded to a condo, and I learned first-hand how different the decision feels from the inside. The question was never “can the bank lend us this?” It was “will we still sleep well in three years if something goes wrong?”</p>
-    <p>That question became the <a href="{{L:safe}}">SAFE Upgrading Plan</a>. Every family I work with sees their sale proceeds, CPF refund, loan limits and buffer on paper before we talk about listing. Some decide to upgrade. Some decide to wait. Both are good outcomes if they're the right ones.</p>
-    <h2>Who I work with</h2>
-    <p>All sorts of people, all over Singapore: first-time buyers, young families moving up, older couples rightsizing, landlords and investors. Many of my clients are Malay families, and I'm always happy to chat in Malay. I also help families dealing with an inherited flat, faraid or a divorce, where a calm, organised consultant makes a real difference.</p>
-    <h2>What I won't do</h2>
-    <ul>
-      <li>Quote you an exciting price just to win your listing.</li>
-      <li>Push you to sell when the numbers say wait.</li>
-      <li>Leave you guessing. You'll know what's happening and what comes next.</li>
-    </ul>
+    <h2>In short</h2>
+    <p>I'm a full-time property consultant with PropNex, focused on HDB resale, upgrading and new launches. Before property I studied business and worked in finance, which is why every client of mine sees their sale proceeds, CPF refund, loan limits and buffer on paper first. That approach became my <a href="{{L:safe}}">SAFE Upgrading Plan</a>.</p>
+    <p>Most of my work comes from referrals and from families who find me on Google. Many are young couples upgrading from their first BTO, older couples rightsizing, and families handling the hard cases: an inherited flat under faraid, an estate, or a divorce. I handle every client personally, from the first sit-down to key handover.</p>
   </div>
-  <div>
-    <div class="card">
-      <h3>The short version</h3>
-      <ul class="ticks">
-        <li>Agent since 2019, top rookie in my first year</li>
-        <li>Top producer every year since</li>
-        <li>Associate Group Director, PropNex</li>
-        <li>PropNex Ambassador</li>
-        <li>Multiple award recipient, Singapore Real Estate Agents Excellence Awards</li>
-        <li>100+ families helped to sell, buy and rent</li>
-        <li>65+ five-star Google reviews</li>
-        <li>Business degree, finance background</li>
-        <li>English and Malay</li>
-      </ul>
-      <p class="fine">CEA Reg. No. R061801F · PropNex Realty Pte Ltd, CEA Licence No. L3008022J</p>
-    </div>
+  <div class="card" style="align-self:start">
+    <h3>At a glance</h3>
+    <ul class="ticks">
+      <li>Associate Group Director, PropNex Realty</li>
+      <li>Top rookie, 2019</li>
+      <li>Top producer every year since</li>
+      <li>PropNex Ambassador</li>
+      <li>Multiple award recipient, Singapore Real Estate Agents Excellence Awards</li>
+      <li>Business degree, finance background</li>
+      <li>Former club president, Jauhari Bilingual Toastmasters</li>
+    </ul>
   </div>
 </div></section>
 
-<section class="band"><div class="wrap split">
-  <div class="portrait">{{PIC:andik-mirta-park.webp|Andik Imran and Mirta Syazanna, Homes with AIMS}}</div>
+<section class="band"><div class="wrap">
+  <div class="section-head"><h2>My career so far</h2><p class="lede">From finance to property, and from my own 3-room BTO to helping 100+ families with theirs.</p></div>
+  <ol class="tl" style="max-width:820px">
+    <li><p class="when">Before property</p><h3>Business studies and finance</h3><p>A business degree and a background in finance taught me to read numbers carefully and explain them simply, the two things clients need most when a home decision is on the table.</p></li>
+    <li class="key"><p class="when">2019</p><h3>Joined PropNex, top rookie</h3><p>Started full-time as a property consultant and finished my first year as top rookie.</p></li>
+    <li><p class="when">Every year since</p><h3>Top producer</h3><p>Consistently among the top producers, with 20 to 25 transactions a year: HDB resale, upgrades, new launches, rentals, and the complicated cases other agents pass on.</p></li>
+    <li class="key"><p class="when">Leadership</p><h3>Associate Group Director and PropNex Ambassador</h3><p>Leading and training other agents, including a three-part Facebook ads workshop for PropNex colleagues built on my own live campaign data. A multiple award recipient at the Singapore Real Estate Agents Excellence Awards.</p></li>
+    <li><p class="when">2026</p><h3>Homes with AIMS, with Mirta</h3><p>My wife Mirta joined me in real estate, and together we started <a href="https://www.homeswithaims.com">Homes with AIMS</a>: a husband-and-wife team, so couples get both perspectives on the same decision.</p></li>
+  </ol>
+</div></section>
+
+<section class="band paper"><div class="wrap">
+  <div class="section-head"><h2>What I'm good at</h2><p class="lede">The skills you're really hiring when you appoint an agent.</p></div>
+  <div class="grid g3">
+    <div class="card"><h3>Pricing and negotiation</h3><p>Pricing from real transactions in your block, not portal wishlists, then negotiating firmly for you. One seller whose flat sat unsold for months with another agent had it sold within weeks, and a new buyer within 48 hours when the first one pulled out.</p></div>
+    <div class="card"><h3>Numbers and planning</h3><p>CPF refunds, accrued interest, loan limits, TDSR and MSR, stamp duties, and the order of moves. I put it all on one page so you can decide calmly. Try my <a href="{{L:calculator}}">loan calculator</a> to see how I think.</p></div>
+    <div class="card"><h3>The complicated cases</h3><p>Faraid and inherited flats, estates, divorce, tight sell-and-buy timelines. I once helped a client challenge an IRAS stamp-duty over-assessment with an accredited valuer. Calm and organised is the job.</p></div>
+    <div class="card"><h3>Marketing that sells homes</h3><p>Listing photos and video, property portals, social media, and Google and Meta ads that I run and train other agents on. Your home gets seen by the right buyers fast.</p></div>
+    <div class="card"><h3>Systems that keep you informed</h3><p>I build my own tools: an automated property report that reaches your WhatsApp in minutes, a lead tracker so no buyer enquiry is missed, and clear updates at every step.</p></div>
+    <div class="card"><h3>Explaining things clearly</h3><p>English or Malay, to you and to your parents. As a former Toastmasters club president who has competed in speech contests, I'm at home in front of a family or a room.</p></div>
+  </div>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <div class="section-head"><h2>Track record</h2><p class="lede">What clients say, and some of the homes we've sold.</p></div>
+  <div class="grid g3">''' + google_cards(GOOGLE[:3]) + '''</div>
+  <div style="margin-top:28px">''' + sold_strip() + '''</div>
+  <div class="btns"><a class="btn ghost" href="{{L:reviews}}">All stories and reviews</a><a class="btn ghost" href="{{GR}}">My Google reviews</a></div>
+</div></section>
+
+<section class="band paper"><div class="wrap split">
+  <div class="portrait">{{PIC:andik-family.webp|Andik Imran with his wife Mirta and their four children}}</div>
+  <div>
+    <p class="kicker">Outside work</p>
+    <h2>Husband to Mirta, dad of four</h2>
+    <p>We started in a 3-room BTO. When the family grew, we upgraded to a condo, and I learned first-hand how different the decision feels from the inside: school runs, grandparents nearby, and how much buffer you really need to sleep well.</p>
+    <p>At home I'm usually fixing something (I enjoy DIY home maintenance, which helps when I'm walking a buyer through a flat) or looking after our plants. I also share property tips on TikTok and Instagram as <b>@andikimran</b>, including a live "Which is better?" series comparing estates and projects.</p>
+    <div class="btns"><a class="btn ghost" href="https://www.tiktok.com/@andikimran">TikTok @andikimran</a><a class="btn ghost" href="https://www.instagram.com/andikimran/">Instagram @andikimran</a></div>
+  </div>
+</div></section>
+
+<section class="band"><div class="wrap split rev">
   <div>
     <p class="kicker">Working together</p>
     <h2>Mirta, my partner at home and at work</h2>
-    <p>Mirta Syazanna is an Associate Director at PropNex (CEA Reg. No. R070524E) with 15 years in marketing. She also lectures in marketing. She's direct, practical and very good at spotting what a buyer will notice before they do.</p>
-    <p>Together we're <a href="https://www.homeswithaims.com">Homes with AIMS</a>, short for Andik Imran and Mirta Syazanna. Most homes are bought by couples, so you get both perspectives: one of us often picks up the worry the other partner hasn't said out loud yet.</p>
+    <p>Mirta Syazanna is an Associate Director at PropNex (CEA Reg. No. R070524E) with a background in marketing. She lectures in marketing and joined real estate in 2024. She's direct, practical and very good at spotting what a buyer will notice before they do.</p>
+    <p>Together we're <a href="https://www.homeswithaims.com">Homes with AIMS</a>, short for Andik Imran and Mirta Syazanna. Most homes are bought by couples, so you get both perspectives.</p>
     <div class="btns"><a class="btn ghost" href="https://www.homeswithaims.com">Visit Homes with AIMS</a></div>
+  </div>
+  <div class="portrait">{{PIC:andik-mirta-park.webp|Andik Imran and Mirta Syazanna, Homes with AIMS}}</div>
+</div></section>
+
+<section class="band paper"><div class="wrap split">
+  <div class="prose">
+    <h2>How I work</h2>
+    <ul>
+      <li>I handle your case personally, from first chat to key handover. It isn't passed to a junior.</li>
+      <li>I'll tell you an honest price range, even when it's not the number you hoped for.</li>
+      <li>If the numbers say wait, I'll tell you to wait.</li>
+      <li>You'll always know what's happening next, in writing.</li>
+    </ul>
+  </div>
+  <div class="card" style="align-self:start">
+    <h3>Credentials</h3>
+    <ul class="ticks">
+      <li>Andik Imran, CEA Reg. No. R061801F</li>
+      <li>PropNex Realty Pte Ltd, CEA Licence No. L3008022J</li>
+      <li>Languages: English, Malay</li>
+    </ul>
+    <p class="fine">You can verify any agent on the <a href="https://www.cea.gov.sg/public-register">CEA Public Register</a>.</p>
   </div>
 </div></section>
 
 <section class="band dark"><div class="wrap split">
-  <div><h2>Start with your numbers</h2><p class="lede">Send your postal code. I'll show you what your flat could fetch and what you'd keep.</p></div>
+  <div><h2>Start with your numbers</h2><p class="lede">Get a free property report on WhatsApp in minutes, or message me directly to talk it through.</p></div>
   <div>''' + sale_check_form() + '''</div>
 </div></section>'''
 
@@ -723,8 +780,8 @@ PAGES = [
          desc="Hi, I'm Andik, a friendly PropNex property consultant since 2019. Buying, selling, upgrading or renting in Singapore? 100+ families helped, 65+ five-star reviews. Call or WhatsApp +65 8736 8736.",
          body=HOME, faq=HOME_FAQ),
     dict(key="about", url="/about", file="about.html", h1_short="About Andik Imran",
-         title="About Andik Imran | PropNex Associate Group Director",
-         desc="Husband, dad of four and PropNex Associate Group Director. Top rookie in 2019 and top producer every year since. Meet Andik Imran and Mirta Syazanna of Homes with AIMS.",
+         title="About Andik Imran | PropNex Associate Group Director, Singapore",
+         desc="Andik Imran: PropNex property consultant since 2019, top rookie and top producer every year since, 100+ families helped, 65+ five-star reviews. Career, skills, credentials and track record.",
          body=ABOUT),
     dict(key="reviews", url="/reviews", file="reviews.html", h1_short="Reviews",
          title="Reviews & Client Stories | Andik Imran, PropNex",

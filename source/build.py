@@ -142,6 +142,9 @@ def person_graph():
             "worksFor": {"@type": "RealEstateAgent", "name": "PropNex Realty Pte Ltd"},
             "knowsLanguage": ["English", "Malay"],
             "spouse": {"@type": "Person", "name": "Mirta Syazanna"},
+            "knowsAbout": ["HDB resale", "HDB upgrading", "New launch condominiums", "CPF housing rules", "Faraid and inherited HDB flats", "Property marketing"],
+            "award": ["Top Rookie, PropNex (2019)", "PropNex Ambassador"],
+            "hasCredential": {"@type": "EducationalOccupationalCredential", "credentialCategory": "license", "name": "CEA-registered salesperson R061801F", "recognizedBy": {"@type": "GovernmentOrganization", "name": "Council for Estate Agencies"}},
             "sameAs": SITE["same_as"],
         },
         {
