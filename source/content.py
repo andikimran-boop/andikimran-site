@@ -208,7 +208,7 @@ def sold_strip():
 # ---------------------------------------------------------------- HOME
 HOME_FAQ = [
     ("Do I have to commit to selling before we talk?", "No. Plenty of first chats end with “not yet”, and that's a good outcome. The Sale Check and our first sit-down are free, with no obligation to list."),
-    ("Who do you work with?", "Pretty much everyone looking to buy, sell or rent a home in Singapore: first-timers, young families moving up, older couples rightsizing, landlords and investors. If I'm not the right person for something, I'll tell you and point you to someone who is."),
+    ("Who do you work with?", "Families buying or selling a home in Singapore: first-timers, young families moving up from HDB to a condo or new launch, condo owners selling, and older couples rightsizing. If I'm not the right person for something, I'll tell you and point you to someone who is."),
     ("Can we speak in Malay?", "Boleh. I'm comfortable in Malay and English, and so is Mirta. Many families switch between both in the same meeting, and that's perfectly fine. More on my <a href=\"{{L:malay}}\">Malay property agent</a> page."),
     ("Do you also help with new launch condos?", "Yes. If your next home is a new condo or EC, I plan the sale and the purchase together so the timing and cash flow work. See the <a href=\"{{L:newlaunch}}\">new launch page</a>."),
     ("What counts as a “complicated” case?", "Inherited flats and faraid, estates still waiting on paperwork, divorce, tight sale-and-buy timelines, and flats needing an extension of stay. These are the cases I enjoy most, because a calm plan makes the biggest difference."),
@@ -219,7 +219,7 @@ HOME = '''<section class="hero"><div class="wrap hero-grid">
   <div class="hero-copy">
     <p class="kicker pnx-line"><span class="pnx">{{PIC:propnex-logo.png|PropNex Realty}}<b>PropNex</b></span>Associate Group Director</p>
     <h1>Hi, meet your <em>property consultant.</em></h1>
-    <p class="lede">I'm Andik. Buying your first home, selling, upgrading, renting, or sorting out something a little more complicated? I'll walk you through it in plain English (or Malay, boleh!), with the numbers worked out first. No pressure, no jargon, just honest advice.</p>
+    <p class="lede">I'm Andik. Buying your first home, selling your HDB or condo, upgrading to a new launch, or sorting out something a little more complicated? I'll walk you through it in plain English (or Malay, boleh!), with the numbers worked out first. No pressure, no jargon, just honest advice.</p>
     <div class="btns">
       <a class="btn primary" href="{{WA:Hi Andik! I found your website and would like to chat.}}">''' + CHAT + '''WhatsApp me</a>
       <a class="btn ghost" href="{{L:salecheck}}">Free property report</a>
@@ -231,7 +231,7 @@ HOME = '''<section class="hero"><div class="wrap hero-grid">
   </div>
   <div class="door-wrap">
     <div class="door">{{PIC:andik-imran.webp|Andik Imran, PropNex property consultant}}<p class="ph">Andik Imran</p></div>
-    <div class="door-tag"><b>100+</b><span>happy families helped to buy, sell and rent</span></div>
+    <div class="door-tag"><b>100+</b><span>happy families helped since 2019</span></div>
   </div>
 </div>''' + SKYLINE + '''</section>
 
@@ -243,7 +243,7 @@ HOME = '''<section class="hero"><div class="wrap hero-grid">
     <a class="card situation" href="{{L:g-upgrade}}"><p class="who">Upgrading</p><h3>Bigger home, without the stress</h3><p>HDB to HDB, to a resale condo or a new launch, with the timeline and payments laid out.</p><span class="more">Upgrading guide →</span></a>
     <a class="card situation" href="{{L:newlaunch}}"><p class="who">New launches</p><h3>Shopping for a new condo?</h3><p>I'll help you compare honestly and plan the money, at no cost to you.</p><span class="more">New launch →</span></a>
     <a class="card situation" href="{{L:g-faraid}}"><p class="who">The complicated ones</p><h3>Inherited flat, faraid, divorce</h3><p>Calm, step-by-step help when life makes a property decision for you.</p><span class="more">How I help →</span></a>
-    <a class="card situation" href="{{WA:Hi Andik, I'd like to ask about renting.}}"><p class="who">Renting</p><h3>Renting out or looking to rent?</h3><p>Finding good tenants, or the right place while you wait for your next home.</p><span class="more">WhatsApp me →</span></a>
+    <a class="card situation" href="{{L:salecheck}}"><p class="who">Condo &amp; EC owners</p><h3>Selling your condo or EC?</h3><p>Private homes sell differently: pricing against URA transactions, sharper presentation, and buyers who compare more. I'll run it properly and plan your next move with you.</p><span class="more">Free property report →</span></a>
   </div>
 </div></section>
 
@@ -374,7 +374,7 @@ ABOUT = '''<section class="article-head"><div class="wrap split">
   <ol class="tl" style="max-width:820px">
     <li><p class="when">Before property</p><h3>Business studies and finance</h3><p>A business degree and a background in finance taught me to read numbers carefully and explain them simply, the two things clients need most when a home decision is on the table.</p></li>
     <li class="key"><p class="when">2019</p><h3>Joined PropNex, top rookie</h3><p>Started full-time as a property consultant and finished my first year as top rookie.</p></li>
-    <li><p class="when">Every year since</p><h3>Top producer</h3><p>Consistently among the top producers, with 20 to 25 transactions a year: HDB resale, upgrades, new launches, rentals, and the complicated cases other agents pass on.</p></li>
+    <li><p class="when">Every year since</p><h3>Top producer</h3><p>Consistently among the top producers, with 20 to 25 transactions a year: HDB resale, upgrades to condos and new launches, condo sales, and the complicated cases other agents pass on.</p></li>
     <li class="key"><p class="when">Leadership</p><h3>Associate Group Director and PropNex Ambassador</h3><p>Leading and training other agents, including a three-part Facebook ads workshop for PropNex colleagues built on my own live campaign data. A multiple award recipient at the Singapore Real Estate Agents Excellence Awards.</p></li>
     <li><p class="when">2026</p><h3>Homes with AIMS, with Mirta</h3><p>My wife Mirta joined me in real estate, and together we started <a href="https://www.homeswithaims.com">Homes with AIMS</a>: a husband-and-wife team, so couples get both perspectives on the same decision.</p></li>
   </ol>
@@ -560,6 +560,26 @@ NEW_LAUNCH = '''<section class="article-head"><div class="wrap split">
     </ul>
   </div>
 </div></section>
+<section class="band"><div class="wrap split rev">
+  <div class="prose">
+    <h2>Sell your HDB and buy your new launch with one agent</h2>
+    <p>Most upgraders use one agent to sell their flat, then walk into a showflat on their own. That's two people who never talk to each other about your timeline, your CPF or your ABSD.</p>
+    <p>When I handle both, one plan covers everything:</p>
+    <ul>
+      <li><b>One timeline:</b> your HDB sale, the booking, the 8-week deadline and TOP, lined up so there's no cash gap.</li>
+      <li><b>One budget:</b> your sale proceeds and CPF refund decide the price range, checked against the <a href="{{L:safe}}">SAFE plan</a>.</li>
+      <li><b>No ABSD surprises:</b> whether you sell first or book first is settled before you commit, not after.</li>
+      <li><b>No extra cost on the purchase:</b> for new launches, the developer pays my fee.</li>
+    </ul>
+    <p>See every payment in the <a href="{{L:g-hdb2nl}}">HDB to new launch timeline</a>.</p>
+  </div>
+  <div class="card" style="align-self:start">
+    <h3>Plan both moves together</h3>
+    <p>Tell me your flat and the projects you're eyeing. I'll show you what your sale funds and which launches fit.</p>
+    <a class="btn primary" href="{{WA:Hi Andik, I want to sell my HDB and buy a new launch. Can we plan both together?}}">''' + CHAT + '''Plan my upgrade</a>
+  </div>
+</div></section>
+
 <section class="band paper"><div class="wrap">
   <h2>The three questions that matter more than the floor plan</h2>
   <div class="grid g3" style="margin-top:24px">
@@ -777,7 +797,7 @@ NOT_FOUND = '''<section class="article-head"><div class="wrap">
 PAGES = [
     dict(key="home", url="/", file="index.html", h1_short="Home",
          title="Andik Imran | PropNex Property Consultant in Singapore (English & Malay)",
-         desc="Hi, I'm Andik, a friendly PropNex property consultant since 2019. Buying, selling, upgrading or renting in Singapore? 100+ families helped, 65+ five-star reviews. Call or WhatsApp +65 8736 8736.",
+         desc="Hi, I'm Andik, a friendly PropNex property consultant since 2019. Buying, selling or upgrading in Singapore? 100+ families helped, 65+ five-star reviews. Call or WhatsApp +65 8736 8736.",
          body=HOME, faq=HOME_FAQ),
     dict(key="about", url="/about", file="about.html", h1_short="About Andik Imran",
          title="About Andik Imran | PropNex Associate Group Director, Singapore",

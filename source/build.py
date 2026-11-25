@@ -86,7 +86,7 @@ def footer(cur_file):
     <div>
       <div class="brand" style="color:#fff">Andik Imran</div>
       <img class="foot-logo" src="{img_src("propnex-logo-white.png", cur_file)}" alt="PropNex Realty" loading="lazy">
-      <p style="margin-top:14px;max-width:34ch">Friendly property consultant with PropNex. Buying, selling, upgrading or renting, in English or Malay.</p>
+      <p style="margin-top:14px;max-width:34ch">Friendly property consultant with PropNex. Buying, selling and upgrading, from HDB to condos and new launches. English or Malay.</p>
       <p><a href="tel:+6587368736">Call +65 8736 8736</a><br><a href="{wa("Hi Andik, I found you through your website.")}">WhatsApp +65 8736 8736</a></p>
     </div>
     <div><h4>Explore</h4><ul>
