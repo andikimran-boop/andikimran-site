@@ -41,9 +41,14 @@
       const lender = type === 'hdb' ? lenderOf() : 'bank';
       $('lease-field').style.display = (type === 'hdb' && lender === 'hdb') ? '' : 'none';
 
-      const i1 = num('c-inc1'), i2 = num('c-inc2'), a1 = num('c-age1') || 30, a2 = num('c-age2') || a1;
-      const income = i1 + i2;
-      const age = income > 0 ? (a1 * i1 + a2 * i2) / income : a1;
+      const rows = [...form.querySelectorAll('.buyer')].map((r) => {
+        const v = (el) => { const x = parseFloat(String(el.value).replace(/[^0-9.]/g, '')); return isFinite(x) ? x : 0; };
+        return { inc: v(r.querySelector('.b-inc')), age: v(r.querySelector('.b-age')) };
+      });
+      const a1 = rows[0].age || 30;
+      rows.forEach((r) => { if (!r.age) r.age = a1; });
+      const income = rows.reduce((s, r) => s + r.inc, 0);
+      const age = income > 0 ? rows.reduce((s, r) => s + r.age * r.inc, 0) / income : a1;
       const debts = num('c-debts');
       const cash = num('c-cash'), cpf = num('c-cpf'), other = num('c-other');
       const price = num('c-price');
@@ -136,6 +141,27 @@
         pr.style.display = '';
       } else { pr.style.display = 'none'; }
     }
+    // add / remove owners (up to 4)
+    const box = $('buyers'), addBtn = $('add-buyer');
+    const renumber = () => {
+      [...box.querySelectorAll('.buyer')].forEach((r, k) => {
+        const n = k + 1;
+        r.querySelector('.b-inc').id = 'c-inc' + n; r.querySelector('.b-age').id = 'c-age' + n;
+        const ls = r.querySelectorAll('label');
+        ls[0].htmlFor = 'c-inc' + n; ls[0].firstChild.textContent = 'Owner ' + n + ' gross monthly income';
+        ls[1].htmlFor = 'c-age' + n; ls[1].firstChild.textContent = 'Owner ' + n + ' age';
+      });
+      addBtn.style.display = box.querySelectorAll('.buyer').length >= 4 ? 'none' : '';
+    };
+    addBtn.addEventListener('click', () => {
+      const r = document.createElement('div');
+      r.className = 'row2 buyer';
+      r.innerHTML = '<div class="field"><label>Owner</label><div class="money"><input class="b-inc" inputmode="numeric" value="0"></div></div>' +
+        '<div class="field"><label>Owner</label><div class="age-row"><input class="b-age" inputmode="numeric" value="0"><button type="button" class="rm-buyer" aria-label="Remove this owner">✕</button></div></div>';
+      r.querySelector('.rm-buyer').addEventListener('click', () => { r.remove(); renumber(); calc(); });
+      box.appendChild(r); renumber(); calc();
+      r.querySelector('.b-inc').focus(); r.querySelector('.b-inc').select();
+    });
     form.addEventListener('input', calc);
     form.addEventListener('change', calc);
     form.addEventListener('submit', (e) => e.preventDefault());

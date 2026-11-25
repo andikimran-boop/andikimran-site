@@ -268,14 +268,13 @@ CALCULATOR = '''<section class="article-head"><div class="wrap">
       </div>
     </fieldset>
     <fieldset><legend>Your income</legend>
-      <div class="row2">
-        <div class="field"><label for="c-inc1">Buyer 1 gross monthly income</label><div class="money"><input id="c-inc1" inputmode="numeric" value="6000"></div></div>
-        <div class="field"><label for="c-age1">Buyer 1 age</label><input id="c-age1" inputmode="numeric" value="32"></div>
+      <div id="buyers">
+        <div class="row2 buyer" data-n="1">
+          <div class="field"><label for="c-inc1">Owner 1 gross monthly income</label><div class="money"><input id="c-inc1" class="b-inc" inputmode="numeric" value="6000"></div></div>
+          <div class="field"><label for="c-age1">Owner 1 age</label><input id="c-age1" class="b-age" inputmode="numeric" value="32"></div>
+        </div>
       </div>
-      <div class="row2">
-        <div class="field"><label for="c-inc2">Buyer 2 gross monthly income <span class="hint">(optional)</span></label><div class="money"><input id="c-inc2" inputmode="numeric" value="5000"></div></div>
-        <div class="field"><label for="c-age2">Buyer 2 age</label><input id="c-age2" inputmode="numeric" value="31"></div>
-      </div>
+      <button type="button" class="add-buyer" id="add-buyer">+ Add another owner</button>
       <div class="field"><label for="c-debts">Other monthly debt repayments <span class="hint">(car loan, personal loans, etc.)</span></label><div class="money"><input id="c-debts" inputmode="numeric" value="0"></div></div>
     </fieldset>
     <fieldset><legend>Your savings</legend>
@@ -291,7 +290,7 @@ CALCULATOR = '''<section class="article-head"><div class="wrap">
         <div class="field"><label for="c-rate">Your interest rate (% a year)</label><input id="c-rate" inputmode="decimal" value="2.6"></div>
       </div>
       <div class="field" id="lease-field" style="display:none"><label for="c-lease">Remaining lease of the flat (years) <span class="hint">(HDB loan tenure is capped at lease minus 20)</span></label><input id="c-lease" inputmode="numeric" value="80"></div>
-      <div class="field"><label for="c-price">Price of the home you're looking at <span class="hint">(optional)</span></label><div class="money"><input id="c-price" inputmode="numeric" value="650000"></div></div>
+      <div class="field"><label for="c-price">Price of the home you're looking at <span class="hint">(optional)</span></label><div class="money"><input id="c-price" inputmode="numeric" value="0"></div></div>
     </fieldset>
   </form>
   <aside class="result" aria-live="polite">

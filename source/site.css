@@ -295,3 +295,9 @@ footer a:hover{color:#7FD3F7}
 .nav a{white-space:nowrap}
 .door-tag{z-index:2}
 @media (max-width:1140px) and (min-width:921px){.nav a{padding:10px 8px;font-size:15px}.brand-pnx{display:none}}
+
+.add-buyer{background:none;border:1.5px dashed var(--teal);color:var(--teal);font:inherit;font-weight:700;padding:10px 16px;border-radius:10px;cursor:pointer;margin:2px 0 16px;width:100%}
+.add-buyer:hover{background:var(--cream)}
+.age-row{display:flex;gap:8px;align-items:center}.age-row input{flex:1;min-width:0}
+.rm-buyer{flex:none;width:40px;height:44px;border:1px solid #c9d3de;background:#fff;border-radius:10px;cursor:pointer;color:var(--muted);font-size:15px}
+.rm-buyer:hover{color:#b42318;border-color:#b42318}
