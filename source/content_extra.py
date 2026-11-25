@@ -279,15 +279,15 @@ CALCULATOR = '''<section class="article-head"><div class="wrap">
     </fieldset>
     <fieldset><legend>Your savings</legend>
       <div class="row2">
-        <div class="field"><label for="c-cash">Cash available for the purchase</label><div class="money"><input id="c-cash" inputmode="numeric" value="60000"></div></div>
-        <div class="field"><label for="c-cpf">CPF OA available <span class="hint">(incl. sale proceeds &amp; refunds)</span></label><div class="money"><input id="c-cpf" inputmode="numeric" value="120000"></div></div>
+        <div class="field"><label for="c-cash">Cash available for the purchase</label><div class="money"><input id="c-cash" inputmode="numeric" value="0"></div></div>
+        <div class="field"><label for="c-cpf">CPF OA available <span class="hint">(incl. sale proceeds &amp; refunds)</span></label><div class="money"><input id="c-cpf" inputmode="numeric" value="0"></div></div>
       </div>
-      <div class="field"><label for="c-other">Legal and other costs</label><div class="money"><input id="c-other" inputmode="numeric" value="3000"></div></div>
+      <div class="field"><label for="c-other">Legal and other costs</label><div class="money"><input id="c-other" inputmode="numeric" value="0"></div></div>
     </fieldset>
     <fieldset><legend>The loan</legend>
       <div class="row2">
         <div class="field"><label for="c-tenure">Loan tenure (years) <span class="hint" id="ten-hint"></span></label><input id="c-tenure" inputmode="numeric" value="25"></div>
-        <div class="field"><label for="c-rate">Your interest rate (% a year)</label><input id="c-rate" inputmode="decimal" value="2.6"></div>
+        <div class="field"><label for="c-rate">Your interest rate (% a year) <span class="hint">(0 uses 2.6% for HDB loans, 2.5% for bank loans)</span></label><input id="c-rate" inputmode="decimal" value="0"></div>
       </div>
       <div class="field" id="lease-field" style="display:none"><label for="c-lease">Remaining lease of the flat (years) <span class="hint">(HDB loan tenure is capped at lease minus 20)</span></label><input id="c-lease" inputmode="numeric" value="80"></div>
       <div class="field"><label for="c-price">Price of the home you're looking at <span class="hint">(optional)</span></label><div class="money"><input id="c-price" inputmode="numeric" value="0"></div></div>
