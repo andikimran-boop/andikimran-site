@@ -21,9 +21,68 @@
       "source": "/home",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/malay-agent-singapore",
+      "destination": "/malay-property-agent",
+      "permanent": true
+    },
+    {
+      "source": "/agent-melayu-singapore",
+      "destination": "/malay-property-agent",
+      "permanent": true
+    },
+    {
+      "source": "/about-andik",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/yishun-sembawang-property-agent",
+      "destination": "/property-agent/yishun",
+      "permanent": true
+    },
+    {
+      "source": "/tampines-property-agent",
+      "destination": "/property-agent/tampines",
+      "permanent": true
+    },
+    {
+      "source": "/hougang-sengkang-property-agent",
+      "destination": "/property-agent/sengkang",
+      "permanent": true
+    },
+    {
+      "source": "/downgrading-hdb-flat-retirement",
+      "destination": "/guides/rightsizing-hdb-flat",
+      "permanent": true
+    },
+    {
+      "source": "/hdb-vs-bank-loan",
+      "destination": "/loan-calculator",
+      "permanent": true
+    },
+    {
+      "source": "/hdb-selling-system:path*",
+      "destination": "/sale-check",
+      "permanent": true
+    },
+    {
+      "source": "/post/:path*",
+      "destination": "/guides",
+      "permanent": true
     }
   ],
   "headers": [
+    {
+      "source": "/404",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    },
     {
       "source": "/assets/(.*)",
       "headers": [
